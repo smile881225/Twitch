@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 微軟正黑體;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    /* ---------------- ------全部設定------ ----------------*/
+    header {
+        height: 50px;
+        width: 100%;
+        
+
+    }
+
+    nav {
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px gray;
+        z-index: 1;
+        padding: 0 2px;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+
+    .discover {
+        height: 50px;
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+
+
+    }
+
+    .logo {
+        height: 30px;
+        width: 30px;
+        background-image: url(./img/logo.png);
+        background-position: center;
+        background-size: 120%;
+
+    }
+
+
+    .more-btn {
+
+        width: 18px;
+        height: 22px;
+        background-image: url(./img/images1.jpg);
+        background-position: center;
+        background-size: 150%;
+
+    }
+
+    .search {
+        width: 390px;
+        height: 30px;
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .input {
+        height: 30px;
+        width: 354px;
+        background-color: gainsboro
+    }
+
+    .search-btn {
+        height: 30px;
+        width: 35px;
+        background-image: url(./img/放大鏡.jpg);
+        background-position: center;
+        background-size: 80%;
+    }
+
+    .account {
+        height: 25px;
+        width: 200px;
+     
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .prime-gaming {
+        height: 20px;
+        width: 20px;
+        background-image: url(./img/皇冠.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .sign-in {
+        height: 30px;
+        width: 40px;
+        background-color: rgb(226, 226, 226);
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 10px;
+    }
+
+
+    .register {
+        height: 30px;
+        width: 40px;
+        background-color: rgb(182, 65, 250);
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 10px;
+  
+}
+.a1{
+    color: white;
+}
+
+    .my-accont {
+        height: 15px;
+        width: 15px;
+        background-image: url(./img/個人.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+
+    /* ---------------- -----nav(導覽列)------ ----------------*/
+    aside {
+        padding: 6px;
+        padding-top: 10px;
+        height: 100vh;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        width: 50px;
+        top: 50px;
+        z-index: 1;
+    }
+
+    .recommend-channel {
+
+        height: 30px;
+        width: 30px;
+        background-image: url(./img/7.jpg);
+        background-position:center;
+    
+        background-size: 160%;
+        border-radius: 15px;
+    }
+
+
+    /* ---------------- -----aside(側邊攔)------ ----------------*/
+
+    main {
+        margin: 0 0 0 35px;
+        padding: 30px 60px;
+        height: 100vh;
+    }
+
+    .h1 {
+        font-size: 54px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .e-sport-description {
+        font-size: 24px;
+      
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: space-between;
+        
+    }
+
+    .col {
+        margin-top: 5px;
+        width: 293px;
+        height: 70px;
+        padding: 7px 12px;
+        background-color: lightcyan;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .space {
+        background-color: white;
+    }
+
+    .game-img {
+        width: 40px;
+        height: 50px;
+        background-image: url(./img/5.jpg);
+background-position :center;
+        background-size: 100%;
+        margin-right: 10px;
+        border-radius: 3px;
+    }
+
+    .live {
+        width: 28px;
+        height: 13px;
+        background-color: crimson;
+        align-self: start;
+        color: floralwhite;
+        position: absolute;
+        display: flex;
+        right: 10px;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game-name {
+        margin: 0;
+    }
+
+    .watch-num {
+        margin: 0;
+    }
+    /* -----------上方的電競欄------------- */
+    .video{
+        width: 100%;
+        height: 1700px;
+        display: flex;
+    }
+    .video-highter{
+        width: 33.33%;
+        padding: 10px;
+        margin-left: -10px;
+    }
+    .video-highter-img{
+        height: 330px;
+        width: 100%;
+        background-image: url(./img/1.jpg);
+        background-position-y:-28px ;
+
+        background-size: 100%;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        padding: 10px;
+    }
+    .video-highter-img>.live{
+        left: 10px;
+    }
+    .video-highter-img>.watch-num{
+        background-color:dimgray;
+        color: cornsilk;
+        font-size: 15px;
+        position:absolute;
+        top: 90%;
+    }
+    .highter-user{
+        display: flex;
+        padding: 5px;
+    }
+    .highter-header
+    {
+        height: 20px;
+        width: 20px;
+background-color: forestgreen;
+    }
+    .video-highter-name{
+        margin-left: 5px;
+    }
+    /* --------video highter-------- */
+    .video-row{
+        width: 66.66%;
+        height: 500px;
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .video-col{
+        max-width: 285px;
+        height: 250px;
+
+    }
+    .video-middle-img{
+        width: 100%;
+        height: 150px;
+        background-image: url(./img/4.jpg);
+        background-position:center;
+background-position-y: -25px;
+        background-size: 100%;
+        position: relative;
+        padding: 10px;
+    }
+    .middle-user{
+        display: flex;
+        padding: 5px;
+    }
+    
+    .middle-header
+    {
+        height: 20px;
+        width: 20px;
+background-color: forestgreen;
+
+    }
+    .video-middle-img>.live{
+        left: 10px;
+    }
+    .video-middle-name{
+        margin-left: 5px;
+    }
+    .video-middle-img>.watch-num{
+        background-color:dimgray;
+        color: cornsilk;
+        font-size: 15px;
+        position:absolute;
+        top: 80%;
+    }
+    .video-middle-title{
+        width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+    }
+       /* --------video middle-------- */
+       .h2{
+           font-size: 36px;
+       font-weight: bold;
+        }
+       .p2{
+           font-size: 20px;
+       }
+       
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="discover">
+                <div class="logo"></div>
+                <div class="browse-btn">
+                    <a href="">瀏覽</a>
+                </div>
+                <div class="more-btn"></div>
+            </div>
+            <div class="search">
+                <div class="input"></div>
+                <div class="search-btn"><a href=""></a></div>
+            </div>
+            <div class="account">
+                <div class="prime-gaming"></div>
+                <div class="sign-in"> <a href="">登入</a></div>
+                <div class="register"><a href="" class="a1">註冊</a></div>
+                <div class="my-accont"></div>
+            </div>
+        </nav>
+        <aside>
+            <div class="recommend-channel 1"></div>
+            <div class="recommend-channel 2"></div>
+            <div class="recommend-channel 3"></div>
+            <div class="recommend-channel 4"></div>
+            <div class="recommend-channel 5"></div>
+        </aside>
+    </header>
+
+    <main>
+        <h1 class="h1">電競</h1>
+        <p class="e-sport-description">
+            即時賽況、賽事精華和您最愛的職業玩家都在這裡
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col">
+                <div class="game-img"></div>
+                <div class="game-info">
+                    <p class="game-name">League of Legends</p>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="live">live</div>
+            </div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+            <div class="col space"></div>
+
+
+        </div>
+        </div>
+        <h2 class="h2">實況中的對戰</h2>
+        <p class="p2">我們認為您會喜歡的最精采現場比賽和對戰</p>
+        <div class="video">
+            <div class="video-highter">
+                <div class="video-highter-img">
+                    <div class="live">live</div>
+                    <p class="watch-num">觀眾人數：1,880</p>
+                </div>
+                <div class="highter-user"> 
+                    <div class="highter-header"></div>
+                    <div class="video-highter-name">嗚嗚嗚</div></div>
+               
+                <div class="video-highter-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                <div class="video-highter-language">英雄聯盟 • 中文</div>
+            </div>
+            <div class="video-row">
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+                <div class="video-col">
+                    <div class="video-middle-img">
+                        <div class="live">live</div>
+                        <p class="watch-num">觀眾人數：1,880</p>
+                    </div>
+                    <div class="middle-user">
+                        <div class="middle-header"></div>
+                        <div class="video-middle-name">嗚嗚嗚</div></div>
+                    
+                    <div class="video-middle-title">Twitch Rivals：英雄聯盟選秀對決歐洲、中東和非洲小組賽階段——第 2 天和四分之一決賽</div>
+                    <div class="video-middle-language">英雄聯盟 • 中文</div>
+                </div>
+            </div>
+           
+                
+        </div>
+    </main>
+</body>
+
+</html>
